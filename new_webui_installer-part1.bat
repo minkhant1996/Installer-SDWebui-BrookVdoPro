@@ -38,14 +38,7 @@ echo === Step 2: Installing pip packages ===
 python -m pip install --upgrade pip
 pip install xformers torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu118 opencv-python
 
-:: Step 3: Check and Install Git
-echo === Step 3: Checking and Installing Git ===
-git --version >nul 2>&1 || (
-    echo Git not found. Installing Git...
-    winget install Git.Git
-)
-
-:: Step 4: Check and Install FFmpeg
+:: Step 3: Check and Install FFmpeg
 echo === Step 4: Checking and Installing FFmpeg ===
 where ffmpeg >nul 2>&1 || (
     echo FFmpeg not installed. Installing FFmpeg...
